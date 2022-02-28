@@ -7,19 +7,14 @@ class TopNav extends Component {
     return <nav className="top-nav" ref={this.props.containerRef}>
       <ul className="nav_list">
         <li className="nav_list-item">
-          <Link to="/" className="nav_link">
-            About
-          </Link>
+          <a href="https://www.linkedin.com/in/matthew-chon-344320177/" className="nav_link">
+            LinkedIn
+          </a>
         </li>
         <li className="nav_list-item">
-          <Link to="/" className="nav_link">
+          <a href="https://github.com/MatthewChon" className="nav_link">
             GitHub
-          </Link>
-        </li>
-        <li className="nav_list-item">
-          <Link to="/" className="nav_link">
-            Resume
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import './Portfolio.css';
 import TopNav from '../../components/topnav/Topnav';
+import Project from '../../components/project/Project';
 
 
 const useIntersectionObserver = (options) => {
@@ -60,6 +61,9 @@ const Portfolio = () => {
           whether it's a position in data science or a software engineering
           role at a tech company.
         </p>
+      </div>
+      <div className="project-section">
+        <Project />
       </div>
     </main>
   </div>;

@@ -39,3 +39,8 @@ header {
   max-width: 900px;
   margin: 0 auto;
 }
+.project-section {
+  width: 100%;
+  height: calc(100vh - 70px);
+  position: relative;
+}
