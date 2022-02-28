@@ -7,10 +7,12 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.projectcard:hover,
 .projectcard.active {
   background-color: var(--backgroundcolor);
   color: #fff;
+}
+.projectcard:hover {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 768px) {
   .projectcard {

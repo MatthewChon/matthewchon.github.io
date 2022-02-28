@@ -73,7 +73,9 @@ class Project extends Component {
           {this.state.data.map((projects) => (
             <div className="item" key={projects.id}
             >
-              <img src={projects.img} alt="" />
+              <a href={projects.url}>
+                <img src={projects.img} alt="" />
+              </a>
               <h3>{projects.title}</h3>
             </div>
           ))}
