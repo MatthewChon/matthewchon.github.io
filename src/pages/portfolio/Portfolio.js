@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import './Portfolio.css';
+import TopNav from '../../components/topnav/Topnav';
 
 
 const useIntersectionObserver = (options) => {
@@ -35,25 +36,7 @@ const Portfolio = () => {
   
   return <div className="portfolio-page">
     <header className={nav_state()}>
-      <nav className="top-nav" ref={containerRef}>
-        <ul className="nav_list">
-          <li className="nav_list-item">
-            <Link to="/" className="nav_link">
-              About
-            </Link>
-          </li>
-          <li className="nav_list-item">
-            <Link to="/" className="nav_link">
-              GitHub
-            </Link>
-          </li>
-          <li className="nav_list-item">
-            <Link to="/" className="nav_link">
-              Resume
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <TopNav containerRef={containerRef} />
     </header>
     <main>
       <section className="portfolio-intro" ref={containerRef}>
