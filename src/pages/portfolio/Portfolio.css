@@ -37,12 +37,19 @@ header {
 .portfolio-intro h1 {
   --font-size: 3em;
   font-size: var(--font-size);
+  font-weight: 1;
   margin: 0;
 }
 .portfolio-about {
   padding: 2em 0;
   max-width: 900px;
   margin: 0 auto;
+}
+.portfolio-about h2 {
+  --font-size: 3em;
+  font-size: var(--font-size);
+  font-weight: 1;
+  text-align: center;
 }
 .project-section {
   width: 100%;

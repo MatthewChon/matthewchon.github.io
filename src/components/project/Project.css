@@ -6,7 +6,8 @@
   align-items: center;
 }
 .project h1 {
-  font-size: 50px;
+  font-size: 3em;
+  font-weight: 1;
 }
 .project ul {
   margin: 10px;
