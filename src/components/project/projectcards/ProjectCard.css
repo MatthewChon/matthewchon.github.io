@@ -1,18 +1,19 @@
 .projectcard {
   --backgroundcolor: #15023a;
-  --font-size: 14px;
+  --font-size: 1em;
   font-size: var(--font-size);
-  margin-right: 50px;
-  padding: 7px;
+  margin-right: 3em;
+  padding: 1em;
   border-radius: 10px;
   cursor: pointer;
 }
+.projectcard:hover,
 .projectcard.active {
   background-color: var(--backgroundcolor);
-  color: white;
+  color: #fff;
 }
 @media (max-width: 768px) {
   .projectcard {
-    margin-right: 20px;
+    margin-right: 2em;
   }
 }

@@ -42,6 +42,7 @@ const Portfolio = () => {
     <main>
       <section className="portfolio-intro" ref={containerRef}>
         <h1>Hello, my name is Matthew</h1>
+        <span>And I am a senior at Queens College studying Computer Science</span>
       </section>
       <div className="portfolio-about">
         <h2>About Me</h2>

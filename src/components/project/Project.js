@@ -7,6 +7,7 @@ class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {selected: "featured", data: []};
+    this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
     switch (this.state.selected) {
@@ -28,6 +29,9 @@ class Project extends Component {
       default:
         this.setState({data: featuredPortfolio});
     }
+  }
+  handleClick(id) {
+    this.setState({selected: id});
   }
   render() {
     const list = [
@@ -52,24 +56,23 @@ class Project extends Component {
         title: "Content",
       },
     ];
-    function setSelected(id) {
-      this.setState({selected: id});
-    }
     return (
       <div className="project" id="project">
         <h1>Project</h1>
         <ul>
-          {list.map((item) => (
-            <ProjectCard
-              title={item.title}
-              active={this.selected === item.id}
-              onClick={()=>setSelected(item.id)}
-              />
-          ))}
+          {list.map((item) => (            
+            <ProjectCard title={item.title}
+            id={item.id}
+            key={item.id}
+            active={this.state.selected === item.id}
+            setSelected={this.handleClick}
+            />
+            ))}
         </ul>
         <div className="project-container">
           {this.state.data.map((projects) => (
-            <div className="item">
+            <div className="item" key={projects.id}
+            >
               <img src={projects.img} alt="" />
               <h3>{projects.title}</h3>
             </div>

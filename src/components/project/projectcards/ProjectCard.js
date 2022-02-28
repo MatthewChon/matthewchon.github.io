@@ -2,10 +2,12 @@ import { Component } from "react";
 import "./ProjectCard.css";
 
 class ProjectCard extends Component {
-  render(title, active) {
+  render() {
+    const setSelected = this.props.setSelected;
     return (
-      <li className={active ? "projectcard active": "projectcard"}>
-        {title}
+      <li className={this.props.active ? "projectcard active": "projectcard"}
+      onClick={() => setSelected(this.props.id)}>
+        {this.props.title}
       </li>
     );
   }
