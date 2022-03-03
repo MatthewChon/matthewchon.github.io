@@ -28,7 +28,7 @@ header {
 }
 .portfolio-intro {
   padding: 50vh 0;
-  background: rgb(91, 121, 151) url(../../images/2014_Guatemala.jpeg);
+  background: rgb(70, 68, 68) url(../../images/2014_Guatemala.jpeg);
   background-size: cover;
   background-blend-mode: multiply;
   color: white;
@@ -55,4 +55,15 @@ header {
   width: 100%;
   height: calc(100vh - 70px);
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .portfolio-intro {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  .portfolio-intro h1 {
+    font-size: 1.5em;
+  }
 }
