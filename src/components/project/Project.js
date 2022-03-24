@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ProjectCard from "./projectcards/ProjectCard";
-import { featuredPortfolio, webPortfolio, mobilePortfolio, designPortfolio, contentPortfolio } from "../../data/data";
+import { Portfolio, webPortfolio, coursePortfolio } from "../../data/data";
 import "./Project.css";
 
 class Project extends Component {
@@ -9,25 +9,28 @@ class Project extends Component {
     this.state = {selected: "featured", data: []};
     this.handleClick = this.handleClick.bind(this);
   }
-  componentDidMount() {
+  updateData() {
     switch (this.state.selected) {
-      case "featured":
-        this.setState({data: featuredPortfolio});
+      case "overall":
+        this.setState({data: Portfolio});
         break;
       case "web":
         this.setState({data: webPortfolio});
         break;
-      case "mobile":
-        this.setState({data: mobilePortfolio});
-        break;
-      case "design":
-        this.setState({data: designPortfolio});
-        break;
-      case "content":
-        this.setState({data: contentPortfolio});
+      case "course":
+        this.setState({data: coursePortfolio});
         break;
       default:
-        this.setState({data: featuredPortfolio});
+        this.setState({data: Portfolio});
+    }
+  }
+
+  componentDidMount() {
+    this.updateData();
+  }
+  componentDidUpdate(prevProps,prevState) {
+    if (this.state.selected !== prevState.selected) {
+      this.updateData();
     }
   }
   handleClick(id) {
@@ -36,24 +39,16 @@ class Project extends Component {
   render() {
     const list = [
       {
-        id: "featured",
-        title: "Featured",
+        id: "overall",
+        title: "Overall",
       },
       {
         id: "web",
         title: "Web App",
       },
       {
-        id: "mobile",
-        title: "Mobile App",
-      },
-      {
-        id: "design",
-        title: "Design",
-      },
-      {
-        id: "content",
-        title: "Content",
+        id: "course",
+        title: "Course Projects",
       },
     ];
     return (
