@@ -9,7 +9,7 @@ export const Portfolio = [
     id: 2,
     title:"Lexical Analyzer",
     img: require("../images/LexicalAnalyzer.png"),
-    url: "https://github.com/MatthewChon/Principle_of_ProgrammingLanguage/tree/main/assignment1",
+    url: "https://github.com/MatthewChon/Lexical-Analyzer/tree/main/assignment1",
   },
   {
     id: 3,
